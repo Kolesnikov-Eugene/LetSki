@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		4486DF112D51450B00BEB9BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4486DEF82D51450A00BEB9BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4486DEFF2D51450A00BEB9BC;
+			remoteInfo = LetSki;
+		};
+		4486DF1B2D51450B00BEB9BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4486DEF82D51450A00BEB9BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4486DEFF2D51450A00BEB9BC;
+			remoteInfo = LetSki;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4486DF002D51450A00BEB9BC /* LetSki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetSki.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4486DF102D51450B00BEB9BC /* LetSkiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LetSkiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4486DF1A2D51450B00BEB9BC /* LetSkiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LetSkiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		4486DF022D51450A00BEB9BC /* LetSki */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LetSki;
+			sourceTree = "<group>";
+		};
+		4486DF132D51450B00BEB9BC /* LetSkiTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LetSkiTests;
+			sourceTree = "<group>";
+		};
+		4486DF1D2D51450B00BEB9BC /* LetSkiUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LetSkiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4486DEFD2D51450A00BEB9BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4486DF0D2D51450B00BEB9BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4486DF172D51450B00BEB9BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4486DEF72D51450A00BEB9BC = {
+			isa = PBXGroup;
+			children = (
+				4486DF022D51450A00BEB9BC /* LetSki */,
+				4486DF132D51450B00BEB9BC /* LetSkiTests */,
+				4486DF1D2D51450B00BEB9BC /* LetSkiUITests */,
+				4486DF012D51450A00BEB9BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4486DF012D51450A00BEB9BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4486DF002D51450A00BEB9BC /* LetSki.app */,
+				4486DF102D51450B00BEB9BC /* LetSkiTests.xctest */,
+				4486DF1A2D51450B00BEB9BC /* LetSkiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4486DEFF2D51450A00BEB9BC /* LetSki */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4486DF242D51450B00BEB9BC /* Build configuration list for PBXNativeTarget "LetSki" */;
+			buildPhases = (
+				4486DEFC2D51450A00BEB9BC /* Sources */,
+				4486DEFD2D51450A00BEB9BC /* Frameworks */,
+				4486DEFE2D51450A00BEB9BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				4486DF022D51450A00BEB9BC /* LetSki */,
+			);
+			name = LetSki;
+			packageProductDependencies = (
+			);
+			productName = LetSki;
+			productReference = 4486DF002D51450A00BEB9BC /* LetSki.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4486DF0F2D51450B00BEB9BC /* LetSkiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4486DF272D51450B00BEB9BC /* Build configuration list for PBXNativeTarget "LetSkiTests" */;
+			buildPhases = (
+				4486DF0C2D51450B00BEB9BC /* Sources */,
+				4486DF0D2D51450B00BEB9BC /* Frameworks */,
+				4486DF0E2D51450B00BEB9BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4486DF122D51450B00BEB9BC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4486DF132D51450B00BEB9BC /* LetSkiTests */,
+			);
+			name = LetSkiTests;
+			packageProductDependencies = (
+			);
+			productName = LetSkiTests;
+			productReference = 4486DF102D51450B00BEB9BC /* LetSkiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4486DF192D51450B00BEB9BC /* LetSkiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4486DF2A2D51450B00BEB9BC /* Build configuration list for PBXNativeTarget "LetSkiUITests" */;
+			buildPhases = (
+				4486DF162D51450B00BEB9BC /* Sources */,
+				4486DF172D51450B00BEB9BC /* Frameworks */,
+				4486DF182D51450B00BEB9BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4486DF1C2D51450B00BEB9BC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4486DF1D2D51450B00BEB9BC /* LetSkiUITests */,
+			);
+			name = LetSkiUITests;
+			packageProductDependencies = (
+			);
+			productName = LetSkiUITests;
+			productReference = 4486DF1A2D51450B00BEB9BC /* LetSkiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4486DEF82D51450A00BEB9BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					4486DEFF2D51450A00BEB9BC = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					4486DF0F2D51450B00BEB9BC = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 4486DEFF2D51450A00BEB9BC;
+					};
+					4486DF192D51450B00BEB9BC = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 4486DEFF2D51450A00BEB9BC;
+					};
+				};
+			};
+			buildConfigurationList = 4486DEFB2D51450A00BEB9BC /* Build configuration list for PBXProject "LetSki" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4486DEF72D51450A00BEB9BC;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 4486DF012D51450A00BEB9BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4486DEFF2D51450A00BEB9BC /* LetSki */,
+				4486DF0F2D51450B00BEB9BC /* LetSkiTests */,
+				4486DF192D51450B00BEB9BC /* LetSkiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4486DEFE2D51450A00BEB9BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4486DF0E2D51450B00BEB9BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4486DF182D51450B00BEB9BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4486DEFC2D51450A00BEB9BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4486DF0C2D51450B00BEB9BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4486DF162D51450B00BEB9BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4486DF122D51450B00BEB9BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4486DEFF2D51450A00BEB9BC /* LetSki */;
+			targetProxy = 4486DF112D51450B00BEB9BC /* PBXContainerItemProxy */;
+		};
+		4486DF1C2D51450B00BEB9BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4486DEFF2D51450A00BEB9BC /* LetSki */;
+			targetProxy = 4486DF1B2D51450B00BEB9BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4486DF222D51450B00BEB9BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4486DF232D51450B00BEB9BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4486DF252D51450B00BEB9BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LetSki/Preview Content\"";
+				DEVELOPMENT_TEAM = NU9QMJ4324;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.eugene.kolesnikov.LetSki;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4486DF262D51450B00BEB9BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LetSki/Preview Content\"";
+				DEVELOPMENT_TEAM = NU9QMJ4324;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.eugene.kolesnikov.LetSki;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4486DF282D51450B00BEB9BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NU9QMJ4324;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.eugene.kolesnikov.LetSkiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LetSki.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LetSki";
+			};
+			name = Debug;
+		};
+		4486DF292D51450B00BEB9BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NU9QMJ4324;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.eugene.kolesnikov.LetSkiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LetSki.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LetSki";
+			};
+			name = Release;
+		};
+		4486DF2B2D51450B00BEB9BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NU9QMJ4324;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.eugene.kolesnikov.LetSkiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LetSki;
+			};
+			name = Debug;
+		};
+		4486DF2C2D51450B00BEB9BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NU9QMJ4324;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.eugene.kolesnikov.LetSkiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LetSki;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4486DEFB2D51450A00BEB9BC /* Build configuration list for PBXProject "LetSki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4486DF222D51450B00BEB9BC /* Debug */,
+				4486DF232D51450B00BEB9BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4486DF242D51450B00BEB9BC /* Build configuration list for PBXNativeTarget "LetSki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4486DF252D51450B00BEB9BC /* Debug */,
+				4486DF262D51450B00BEB9BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4486DF272D51450B00BEB9BC /* Build configuration list for PBXNativeTarget "LetSkiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4486DF282D51450B00BEB9BC /* Debug */,
+				4486DF292D51450B00BEB9BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4486DF2A2D51450B00BEB9BC /* Build configuration list for PBXNativeTarget "LetSkiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4486DF2B2D51450B00BEB9BC /* Debug */,
+				4486DF2C2D51450B00BEB9BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4486DEF82D51450A00BEB9BC /* Project object */;
+}
