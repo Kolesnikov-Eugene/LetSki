@@ -20,5 +20,9 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Select Xcode Version
+        run: sudo xcode-select -s /Applications/Xcode_15.0.app  # Adjust version
+      - name: Install Dependencies
+        run: bundle install
       - name: Build App
         run: bundle exec fastlane build
