@@ -22,13 +22,3 @@ jobs:
       - uses: actions/checkout@v3
       - name: Build App
         run: bundle exec fastlane build
-
-  deploy_firebase:
-    needs: build
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Upload to Firebase App Distribution
-        env:
-          FIREBASE_CREDENTIALS: ${{ secrets.FIREBASE_CREDENTIALS }}
-        run: bundle exec fastlane firebase_distribution
