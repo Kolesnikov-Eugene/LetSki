@@ -28,6 +28,19 @@ jobs:
       - name: Install dependencies
         run: bundle install --path vendor/bundle
 
+      - name: Resolve Swift Package Dependencies
+        run: xcodebuild -resolvePackageDependencies
+
+      - name: Clean Derived Data
+        run: rm -rf ~/Library/Developer/Xcode/DerivedData
+
+      - name: Build Macro Dependencies
+        run: |
+          xcodebuild -project LetSki.xcodeproj \
+            -scheme LetSki \
+            -destination 'generic/platform=iOS Simulator' \
+            BUILD_LIBRARY_FOR_DISTRIBUTION=YES
+
       - name: Install Fastlane Plugins
         run: bundle exec fastlane add_plugin firebase_app_distribution
 
@@ -47,6 +60,19 @@ jobs:
 
       - name: Install dependencies
         run: bundle install --path vendor/bundle
+
+      - name: Resolve Swift Package Dependencies
+        run: xcodebuild -resolvePackageDependencies
+
+      - name: Clean Derived Data
+        run: rm -rf ~/Library/Developer/Xcode/DerivedData
+
+      - name: Build Macro Dependencies
+        run: |
+          xcodebuild -project LetSki.xcodeproj \
+            -scheme LetSki \
+            -destination 'generic/platform=iOS Simulator' \
+            BUILD_LIBRARY_FOR_DISTRIBUTION=YES
 
       - name: Install Fastlane Plugins
         run: bundle exec fastlane add_plugin firebase_app_distribution
