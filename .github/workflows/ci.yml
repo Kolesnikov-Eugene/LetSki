@@ -39,11 +39,10 @@ jobs:
 
       - name: Generate Swift Macros
         run: |
-          xcodebuild build \
+          SKIP_MACRO_VALIDATION=YES xcodebuild build \
             -scheme LetSki \
             -target ComposableArchitectureMacros \
-            -destination 'platform=macOS' \
-            -skipMacroValidation YES
+            -destination 'platform=macOS'
 
       - name: Build the project
         run: |
