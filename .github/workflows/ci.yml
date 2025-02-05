@@ -31,7 +31,7 @@ jobs:
           xcodebuild build \
             -project LetSki.xcodeproj \
             -scheme LetSki \
-            -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
+            -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.5' \
             | xcpretty && exit ${PIPESTATUS[0]}
 
       - name: Run tests
