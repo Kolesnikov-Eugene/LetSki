@@ -22,7 +22,7 @@ platform :ios do
     scan(
       scheme: "LetSki",
       clean: true,
-      skip_package_dependencies: true,  # Prevent resolving package dependencies
+      test_without_building: true  # Prevent resolving package dependencies
       device: "iPhone 15 Pro",  # Adjust the simulator device if needed
       result_bundle: true        # Generate result bundle for easier debugging
     )
