@@ -16,25 +16,28 @@
 default_platform(:ios)
 
 platform :ios do
+  # Run tests
   desc "Run tests"
   lane :tests do
     scan(
       scheme: "LetSki",
-      clean: true
+      clean: true,
+      device: "iPhone 15 Pro",  # Adjust the simulator device if needed
+      result_bundle: true        # Generate result bundle for easier debugging
     )
   end
-end
 
-default_platform(:ios)
-
-lane :build do
-  gym(
-    scheme: "LetSki",              
-    clean: true,                     
-    output_directory: "./build",     
-    output_name: "LetSki.ipa",      
-    configuration: "Release",        
-    export_method: "development",     
-    silent: false                     
-  )
+  # Build the app
+  desc "Build the app"
+  lane :build do
+    gym(
+      scheme: "LetSki",               # The name of your scheme
+      clean: true,                    # Clean the build before running
+      output_directory: "./build",    # Output directory for the built IPA
+      output_name: "LetSki.ipa",      # Name of the generated IPA file
+      configuration: "Release",       # Build configuration (could be 'Release' or 'Debug')
+      export_method: "development",   # Export method (can also be 'app-store', 'ad-hoc', etc.)
+      silent: false                   # Show full output for debugging
+    )
+  end
 end
