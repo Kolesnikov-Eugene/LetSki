@@ -12,9 +12,15 @@ on:
 
 jobs:
   test:
-    runs-on: macos-latest
+    runs-on: macos-14
     steps:
       - uses: actions/checkout@v3
+
+      - name: List available Xcode versions (Debugging)
+        run: ls /Applications | grep Xcode
+
+      - name: Select Xcode Version
+        run: sudo xcode-select -s /Applications/Xcode_15.4.app
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -32,9 +38,12 @@ jobs:
         run: bundle exec fastlane tests
 
   build:
-    runs-on: macos-latest
+    runs-on: macos-14
     steps:
       - uses: actions/checkout@v3
+
+      - name: Select Xcode Version
+        run: sudo xcode-select -s /Applications/Xcode_15.4.app
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
