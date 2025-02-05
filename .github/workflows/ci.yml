@@ -26,7 +26,7 @@ jobs:
       - name: Run tests
         run: |
           xcodebuild test \
-            -workspace LetSki.xcworkspace \
+            -project LetSki.xcodeproj \
             -scheme LetSki \
             -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
             | xcpretty && exit ${PIPESTATUS[0]}
