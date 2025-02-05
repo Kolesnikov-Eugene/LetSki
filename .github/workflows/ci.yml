@@ -22,14 +22,14 @@ jobs:
           ruby-version: '3.0'
           bundler-cache: true
 
-      - name: Install dependencies
-        run: bundle install --path vendor/bundle
-
-      - name: Clean Build Folder
-        run: rm -rf ~/Library/Developer/Xcode/DerivedData/*
-
-      - name: List available Xcode versions (Debugging)
-        run: ls /Applications | grep Xcode
+#      - name: Install dependencies
+#        run: bundle install --path vendor/bundle
+#
+#      - name: Clean Build Folder
+#        run: rm -rf ~/Library/Developer/Xcode/DerivedData/*
+#
+#      - name: List available Xcode versions (Debugging)
+#        run: ls /Applications | grep Xcode
 
       - name: Run tests
         run: bundle exec fastlane tests
