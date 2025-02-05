@@ -47,18 +47,16 @@ jobs:
 
       - name: Build the project
         run: |
-          xcodebuild build \
+          SKIP_MACRO_VALIDATION=YES xcodebuild build \
             -project LetSki.xcodeproj \
             -scheme LetSki \
             -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.5' \
-            -skipMacroValidation YES \
             | xcpretty && exit ${PIPESTATUS[0]}
 
       - name: Run tests
         run: |
-          xcodebuild test \
+          SKIP_MACRO_VALIDATION=YES xcodebuild test \
             -project LetSki.xcodeproj \
             -scheme LetSki \
             -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.5' \
-            -skipMacroValidation YES \
             | xcpretty && exit ${PIPESTATUS[0]}
