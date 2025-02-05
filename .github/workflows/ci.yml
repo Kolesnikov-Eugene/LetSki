@@ -23,25 +23,37 @@ jobs:
       - name: Debug - Check Xcode Version
         run: xcodebuild -version
 
-      - name: Cache Swift Packages
-        uses: actions/cache@v3
-        with:
-          path: ~/Library/Developer/Xcode/DerivedData
-          key: ${{ runner.os }}-swiftpm-${{ hashFiles('**/Package.resolved') }}
-          restore-keys: |
-            ${{ runner.os }}-swiftpm-
+      - name: Clean Build Folder
+        run: |
+          xcodebuild clean -scheme LetSki
+          rm -rf ~/Library/Developer/Xcode/DerivedData/*
 
-      - name: Clean DerivedData
-        run: rm -rf ~/Library/Developer/Xcode/DerivedData/*
+      - name: Force Swift 5.9 (Prevent Swift 6 Issues)
+        run: echo "swift-tools-version:5.9" > .swift-version
 
       - name: Resolve Swift Packages
         run: xcodebuild -resolvePackageDependencies -scheme LetSki
 
-      - name: Generate Swift Macros
+      - name: Build Swift Macros
         run: |
           SKIP_MACRO_VALIDATION=YES xcodebuild build \
             -scheme LetSki \
             -target ComposableArchitectureMacros \
+            -destination 'platform=macOS'
+
+          SKIP_MACRO_VALIDATION=YES xcodebuild build \
+            -scheme LetSki \
+            -target CasePathsMacros \
+            -destination 'platform=macOS'
+
+          SKIP_MACRO_VALIDATION=YES xcodebuild build \
+            -scheme LetSki \
+            -target DependenciesMacrosPlugin \
+            -destination 'platform=macOS'
+
+          SKIP_MACRO_VALIDATION=YES xcodebuild build \
+            -scheme LetSki \
+            -target PerceptionMacros \
             -destination 'platform=macOS'
 
       - name: Build the project
