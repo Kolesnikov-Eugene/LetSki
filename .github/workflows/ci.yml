@@ -11,14 +11,38 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+          bundler-cache: true
+
       - name: Install dependencies
-        run: bundle install
+        run: bundle install --path vendor/bundle
+
+      - name: Install Fastlane plugins
+        run: bundle exec fastlane plugin install fastlane-plugin-firebase_app_distribution
+
       - name: Run tests
-        run: bundle exec fastlane scan
+        run: bundle exec fastlane tests
 
   build:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: bundle install --path vendor/bundle
+
+      - name: Install Fastlane plugins
+        run: bundle exec fastlane plugin install fastlane-plugin-firebase_app_distribution
+
       - name: Build App
         run: bundle exec fastlane build
