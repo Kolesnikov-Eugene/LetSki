@@ -23,14 +23,19 @@ jobs:
       - name: Debug - Check Xcode Version
         run: xcodebuild -version
 
+      - name: Cache Swift Packages
+        uses: actions/cache@v3
+        with:
+          path: ~/Library/Developer/Xcode/DerivedData
+          key: ${{ runner.os }}-swiftpm-${{ hashFiles('**/Package.resolved') }}
+          restore-keys: |
+            ${{ runner.os }}-swiftpm-
+
       - name: Clean DerivedData
         run: rm -rf ~/Library/Developer/Xcode/DerivedData/*
 
       - name: Resolve Swift Packages
-        run: |
-          xcodebuild -resolvePackageDependencies \
-            -scheme LetSki \
-            -UsePackageSupportBuiltinSCM YES
+        run: xcodebuild -resolvePackageDependencies -scheme LetSki
 
       - name: Generate Swift Macros
         run: |
