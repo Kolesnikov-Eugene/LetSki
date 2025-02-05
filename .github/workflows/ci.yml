@@ -32,13 +32,13 @@ jobs:
       - name: Clean Derived Data
         run: rm -rf ~/Library/Developer/Xcode/DerivedData/*
 
-      - name: Build Macro Dependencies
+      - name: Build Swift Macros
         run: |
           xcodebuild -project LetSki.xcodeproj \
             -scheme LetSki \
             -destination 'generic/platform=iOS Simulator' \
-            -configuration Release \
-            -target ComposableArchitectureMacros \
+            -configuration Debug \
+            -skip-testing \
             BUILD_LIBRARY_FOR_DISTRIBUTION=YES clean build
 
       - name: Install Fastlane Plugins
@@ -68,13 +68,13 @@ jobs:
       - name: Clean Derived Data
         run: rm -rf ~/Library/Developer/Xcode/DerivedData/*
 
-      - name: Build Macro Dependencies
+      - name: Build Swift Macros
         run: |
           xcodebuild -project LetSki.xcodeproj \
             -scheme LetSki \
             -destination 'generic/platform=iOS Simulator' \
-            -configuration Release \
-            -target ComposableArchitectureMacros \
+            -configuration Debug \
+            -skip-testing \
             BUILD_LIBRARY_FOR_DISTRIBUTION=YES clean build
 
       - name: Install Fastlane Plugins
