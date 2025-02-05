@@ -12,6 +12,8 @@
 		44005D742D52A11500EF644D /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 44005D732D52A11500EF644D /* FirebaseCore */; };
 		44005D762D52A11500EF644D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 44005D752D52A11500EF644D /* FirebaseFirestore */; };
 		44005D782D52A11500EF644D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 44005D772D52A11500EF644D /* FirebaseStorage */; };
+		44005D7B2D52B1EE00EF644D /* GeoFire in Frameworks */ = {isa = PBXBuildFile; productRef = 44005D7A2D52B1EE00EF644D /* GeoFire */; };
+		44005D7D2D52B1EE00EF644D /* GeoFireUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 44005D7C2D52B1EE00EF644D /* GeoFireUtils */; };
 		4438F22D2D5151970024645E /* NeedleFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 4438F22C2D5151970024645E /* NeedleFoundation */; };
 		4438F22F2D5151970024645E /* NeedleFoundationTest in Frameworks */ = {isa = PBXBuildFile; productRef = 4438F22E2D5151970024645E /* NeedleFoundationTest */; };
 		4438F2322D5151F90024645E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 4438F2312D5151F90024645E /* ComposableArchitecture */; };
@@ -71,9 +73,11 @@
 				44005D722D52A11500EF644D /* FirebaseAuth in Frameworks */,
 				44005D782D52A11500EF644D /* FirebaseStorage in Frameworks */,
 				4438F23D2D51576A0024645E /* LetSkiView in Frameworks */,
+				44005D7B2D52B1EE00EF644D /* GeoFire in Frameworks */,
 				44005D702D52A11500EF644D /* FirebaseAppDistribution-Beta in Frameworks */,
 				44005D742D52A11500EF644D /* FirebaseCore in Frameworks */,
 				44005D762D52A11500EF644D /* FirebaseFirestore in Frameworks */,
+				44005D7D2D52B1EE00EF644D /* GeoFireUtils in Frameworks */,
 				4438F2322D5151F90024645E /* ComposableArchitecture in Frameworks */,
 				4438F22D2D5151970024645E /* NeedleFoundation in Frameworks */,
 			);
@@ -148,6 +152,8 @@
 				44005D732D52A11500EF644D /* FirebaseCore */,
 				44005D752D52A11500EF644D /* FirebaseFirestore */,
 				44005D772D52A11500EF644D /* FirebaseStorage */,
+				44005D7A2D52B1EE00EF644D /* GeoFire */,
+				44005D7C2D52B1EE00EF644D /* GeoFireUtils */,
 			);
 			productName = LetSki;
 			productReference = 4486DF002D51450A00BEB9BC /* LetSki.app */;
@@ -238,6 +244,7 @@
 				4438F23B2D51576A0024645E /* XCLocalSwiftPackageReference "LetSkiView" */,
 				4438F23F2D5157EA0024645E /* XCLocalSwiftPackageReference "MapView" */,
 				44005D6E2D52A11500EF644D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				44005D792D52B1EE00EF644D /* XCRemoteSwiftPackageReference "geofire-objc" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4486DF012D51450A00BEB9BC /* Products */;
@@ -504,7 +511,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NU9QMJ4324;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.eugene.kolesnikov.LetSkiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -523,7 +530,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NU9QMJ4324;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.eugene.kolesnikov.LetSkiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -541,6 +548,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NU9QMJ4324;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.eugene.kolesnikov.LetSkiUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -558,6 +566,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NU9QMJ4324;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.eugene.kolesnikov.LetSkiUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -629,6 +638,14 @@
 				minimumVersion = 11.8.0;
 			};
 		};
+		44005D792D52B1EE00EF644D /* XCRemoteSwiftPackageReference "geofire-objc" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/geofire-objc.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 		4438F22B2D5151970024645E /* XCRemoteSwiftPackageReference "needle" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/uber/needle.git";
@@ -672,6 +689,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 44005D6E2D52A11500EF644D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		44005D7A2D52B1EE00EF644D /* GeoFire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44005D792D52B1EE00EF644D /* XCRemoteSwiftPackageReference "geofire-objc" */;
+			productName = GeoFire;
+		};
+		44005D7C2D52B1EE00EF644D /* GeoFireUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44005D792D52B1EE00EF644D /* XCRemoteSwiftPackageReference "geofire-objc" */;
+			productName = GeoFireUtils;
 		};
 		4438F22C2D5151970024645E /* NeedleFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
