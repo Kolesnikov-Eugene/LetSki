@@ -25,36 +25,36 @@ jobs:
 
       - name: Clean Build Folder
         run: |
-          xcodebuild clean -scheme LetSki
+          xcodebuild -skipMacroValidation clean -scheme LetSki
           rm -rf ~/Library/Developer/Xcode/DerivedData/*
 
-      - name: Force Swift 5.9 (Prevent Swift 6 Issues)
-        run: echo "swift-tools-version:5.9" > .swift-version
+      # - name: Force Swift 5.9 (Prevent Swift 6 Issues)
+      #   run: echo "swift-tools-version:5.9" > .swift-version
 
       - name: Resolve Swift Packages
-        run: xcodebuild -resolvePackageDependencies -scheme LetSki
+        run: xcodebuild -skipMacroValidation -resolvePackageDependencies -scheme LetSki
 
-      - name: Build Swift Macros
-        run: |
-          xcodebuild -skipMacroValidation build \
-            -scheme LetSki \
-            -target ComposableArchitectureMacros \
-            -destination 'platform=macOS'
+      # - name: Build Swift Macros
+      #   run: |
+      #     xcodebuild -skipMacroValidation build \
+      #       -scheme LetSki \
+      #       -target ComposableArchitectureMacros \
+      #       -destination 'platform=macOS'
 
-          xcodebuild -skipMacroValidation build \
-            -scheme LetSki \
-            -target CasePathsMacros \
-            -destination 'platform=macOS'
+      #     xcodebuild -skipMacroValidation build \
+      #       -scheme LetSki \
+      #       -target CasePathsMacros \
+      #       -destination 'platform=macOS'
 
-          xcodebuild -skipMacroValidation build \
-            -scheme LetSki \
-            -target DependenciesMacrosPlugin \
-            -destination 'platform=macOS'
+      #     xcodebuild -skipMacroValidation build \
+      #       -scheme LetSki \
+      #       -target DependenciesMacrosPlugin \
+      #       -destination 'platform=macOS'
 
-          xcodebuild -skipMacroValidation build \
-            -scheme LetSki \
-            -target PerceptionMacros \
-            -destination 'platform=macOS'
+      #     xcodebuild -skipMacroValidation build \
+      #       -scheme LetSki \
+      #       -target PerceptionMacros \
+      #       -destination 'platform=macOS'
 
       - name: Build the project
         run: |
