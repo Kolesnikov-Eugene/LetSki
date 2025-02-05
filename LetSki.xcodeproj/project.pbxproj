@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -47,21 +47,9 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		4486DF022D51450A00BEB9BC /* LetSki */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = LetSki;
-			sourceTree = "<group>";
-		};
-		4486DF132D51450B00BEB9BC /* LetSkiTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = LetSkiTests;
-			sourceTree = "<group>";
-		};
-		4486DF1D2D51450B00BEB9BC /* LetSkiUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = LetSkiUITests;
-			sourceTree = "<group>";
-		};
+		4486DF022D51450A00BEB9BC /* LetSki */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = LetSki; sourceTree = "<group>"; };
+		4486DF132D51450B00BEB9BC /* LetSkiTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = LetSkiTests; sourceTree = "<group>"; };
+		4486DF1D2D51450B00BEB9BC /* LetSkiUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = LetSkiUITests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +218,7 @@
 				};
 			};
 			buildConfigurationList = 4486DEFB2D51450A00BEB9BC /* Build configuration list for PBXProject "LetSki" */;
+			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -246,7 +235,6 @@
 				44005D6E2D52A11500EF644D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				44005D792D52B1EE00EF644D /* XCRemoteSwiftPackageReference "geofire-objc" */,
 			);
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 4486DF012D51450A00BEB9BC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
