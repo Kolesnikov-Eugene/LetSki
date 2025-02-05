@@ -29,10 +29,11 @@ jobs:
         run: bundle install --path vendor/bundle
 
       - name: Resolve Swift Package Dependencies
-        run: xcodebuild -resolvePackageDependencies
+        run: |
+          xcodebuild -resolvePackageDependencies -project LetSki.xcodeproj
 
       - name: Clean Derived Data
-        run: rm -rf ~/Library/Developer/Xcode/DerivedData
+        run: rm -rf ~/Library/Developer/Xcode/DerivedData/*
 
       - name: Build Macro Dependencies
         run: |
@@ -62,10 +63,11 @@ jobs:
         run: bundle install --path vendor/bundle
 
       - name: Resolve Swift Package Dependencies
-        run: xcodebuild -resolvePackageDependencies
+        run: |
+          xcodebuild -resolvePackageDependencies -project LetSki.xcodeproj
 
       - name: Clean Derived Data
-        run: rm -rf ~/Library/Developer/Xcode/DerivedData
+        run: rm -rf ~/Library/Developer/Xcode/DerivedData/*
 
       - name: Build Macro Dependencies
         run: |
