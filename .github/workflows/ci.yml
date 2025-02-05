@@ -23,8 +23,22 @@ jobs:
       - name: Debug - Check Xcode Version
         run: xcodebuild -version
 
+      - name: Clean DerivedData
+        run: rm -rf ~/Library/Developer/Xcode/DerivedData/*
+
       - name: Resolve Swift Packages
-        run: xcodebuild -resolvePackageDependencies -scheme LetSki
+        run: |
+          xcodebuild -resolvePackageDependencies \
+            -scheme LetSki \
+            -UsePackageSupportBuiltinSCM YES
+
+      - name: Generate Swift Macros
+        run: |
+          xcodebuild build \
+            -scheme LetSki \
+            -target ComposableArchitectureMacros \
+            -destination 'platform=macOS' \
+            -skipMacroValidation YES
 
       - name: Build the project
         run: |
@@ -32,6 +46,7 @@ jobs:
             -project LetSki.xcodeproj \
             -scheme LetSki \
             -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.5' \
+            -skipMacroValidation YES \
             | xcpretty && exit ${PIPESTATUS[0]}
 
       - name: Run tests
@@ -40,4 +55,5 @@ jobs:
             -project LetSki.xcodeproj \
             -scheme LetSki \
             -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.5' \
+            -skipMacroValidation YES \
             | xcpretty && exit ${PIPESTATUS[0]}
