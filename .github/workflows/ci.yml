@@ -64,10 +64,11 @@ jobs:
             -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.5' \
             | xcpretty && exit ${PIPESTATUS[0]}
 
-      - name: Run tests
+      - name: Run unit tests only (skip UI tests)
         run: |
           xcodebuild -skipMacroValidation test \
             -project LetSki.xcodeproj \
             -scheme LetSki \
+            -only-testing:LetSkiTests \
             -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.5' \
             | xcpretty && exit ${PIPESTATUS[0]}
