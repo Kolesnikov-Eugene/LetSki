@@ -6,16 +6,37 @@
 //
 
 import SwiftUI
+import LetSkiView
+import MapView
+
+enum TabItem: Hashable {
+    case ski
+    case map
+}
 
 struct ContentView: View {
+    @State private var selectedTab: TabItem = .ski
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView(selection: $selectedTab) {
+            LetSkiView()
+                .tabItem {
+                    Label(
+                        "LetSKi",
+                        systemImage: "figure.skiing.crosscountry.circle"
+                    )
+                }
+                .tag(TabItem.ski)
+            MapView()
+                .tabItem {
+                    Label(
+                        "Map",
+                        systemImage: "map"
+                    )
+                }
+                .tag(TabItem.map)
         }
-        .padding()
+        .tint(.blue)
     }
 }
 
