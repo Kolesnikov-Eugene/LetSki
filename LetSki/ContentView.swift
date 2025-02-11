@@ -19,7 +19,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            LetSkiView()
+            LetSkiMainView(factory: LetSkiFactory())
                 .tabItem {
                     Label(
                         "LetSKi",

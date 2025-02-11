@@ -16,9 +16,9 @@
 		44005D7D2D52B1EE00EF644D /* GeoFireUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 44005D7C2D52B1EE00EF644D /* GeoFireUtils */; };
 		4438F22D2D5151970024645E /* NeedleFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 4438F22C2D5151970024645E /* NeedleFoundation */; };
 		4438F22F2D5151970024645E /* NeedleFoundationTest in Frameworks */ = {isa = PBXBuildFile; productRef = 4438F22E2D5151970024645E /* NeedleFoundationTest */; };
-		4438F2322D5151F90024645E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 4438F2312D5151F90024645E /* ComposableArchitecture */; };
 		4438F23D2D51576A0024645E /* LetSkiView in Frameworks */ = {isa = PBXBuildFile; productRef = 4438F23C2D51576A0024645E /* LetSkiView */; };
 		4438F2412D5157EA0024645E /* MapView in Frameworks */ = {isa = PBXBuildFile; productRef = 4438F2402D5157EA0024645E /* MapView */; };
+		44DAEDB62D5BE8180052D649 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 44DAEDB52D5BE8180052D649 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +71,7 @@
 			files = (
 				4438F2412D5157EA0024645E /* MapView in Frameworks */,
 				44005D722D52A11500EF644D /* FirebaseAuth in Frameworks */,
+				44DAEDB62D5BE8180052D649 /* ComposableArchitecture in Frameworks */,
 				44005D782D52A11500EF644D /* FirebaseStorage in Frameworks */,
 				4438F23D2D51576A0024645E /* LetSkiView in Frameworks */,
 				44005D7B2D52B1EE00EF644D /* GeoFire in Frameworks */,
@@ -78,7 +79,6 @@
 				44005D742D52A11500EF644D /* FirebaseCore in Frameworks */,
 				44005D762D52A11500EF644D /* FirebaseFirestore in Frameworks */,
 				44005D7D2D52B1EE00EF644D /* GeoFireUtils in Frameworks */,
-				4438F2322D5151F90024645E /* ComposableArchitecture in Frameworks */,
 				4438F22D2D5151970024645E /* NeedleFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,7 +144,6 @@
 			name = LetSki;
 			packageProductDependencies = (
 				4438F22C2D5151970024645E /* NeedleFoundation */,
-				4438F2312D5151F90024645E /* ComposableArchitecture */,
 				4438F23C2D51576A0024645E /* LetSkiView */,
 				4438F2402D5157EA0024645E /* MapView */,
 				44005D6F2D52A11500EF644D /* FirebaseAppDistribution-Beta */,
@@ -154,6 +153,7 @@
 				44005D772D52A11500EF644D /* FirebaseStorage */,
 				44005D7A2D52B1EE00EF644D /* GeoFire */,
 				44005D7C2D52B1EE00EF644D /* GeoFireUtils */,
+				44DAEDB52D5BE8180052D649 /* ComposableArchitecture */,
 			);
 			productName = LetSki;
 			productReference = 4486DF002D51450A00BEB9BC /* LetSki.app */;
@@ -240,11 +240,11 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				4438F22B2D5151970024645E /* XCRemoteSwiftPackageReference "needle" */,
-				4438F2302D5151F90024645E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				4438F23B2D51576A0024645E /* XCLocalSwiftPackageReference "LetSkiView" */,
 				4438F23F2D5157EA0024645E /* XCLocalSwiftPackageReference "MapView" */,
 				44005D6E2D52A11500EF644D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				44005D792D52B1EE00EF644D /* XCRemoteSwiftPackageReference "geofire-objc" */,
+				44DAEDB42D5BE8180052D649 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4486DF012D51450A00BEB9BC /* Products */;
@@ -654,7 +654,7 @@
 				minimumVersion = 0.25.1;
 			};
 		};
-		4438F2302D5151F90024645E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+		44DAEDB42D5BE8180052D649 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
 			requirement = {
@@ -710,11 +710,6 @@
 			package = 4438F22B2D5151970024645E /* XCRemoteSwiftPackageReference "needle" */;
 			productName = NeedleFoundationTest;
 		};
-		4438F2312D5151F90024645E /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4438F2302D5151F90024645E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
-		};
 		4438F23C2D51576A0024645E /* LetSkiView */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LetSkiView;
@@ -722,6 +717,11 @@
 		4438F2402D5157EA0024645E /* MapView */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MapView;
+		};
+		44DAEDB52D5BE8180052D649 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44DAEDB42D5BE8180052D649 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

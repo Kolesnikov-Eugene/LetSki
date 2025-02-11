@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol LetSkiViewModelProtocol: ObservableObject {
+public protocol LetSkiViewModelProtocol: ObservableObject, AnyObject {
     
 }
 
-final class LetSkiViewModel: LetSkiViewModelProtocol {
-    private let coordinator: LetSkiCoordinator
+public final class LetSkiViewModel: LetSkiViewModelProtocol {
+    private var coordinator: AnyCoordinator
     
-    init(coordinator: LetSkiCoordinator) {
+    init(coordinator: AnyCoordinator) {
         self.coordinator = coordinator
     }
 }

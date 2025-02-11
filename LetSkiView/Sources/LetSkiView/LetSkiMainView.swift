@@ -8,18 +8,26 @@
 import SwiftUI
 import ComposableArchitecture
 
-struct Item: Hashable {
+public struct Item: Hashable {
     let id: UUID
     let name: String
 }
 
-public struct LetSkiView: View {
-    @StateObject private var coordinator = LetSkiCoordinator()
+public struct LetSkiMainView: View {
+//    @StateObject private var coordinator: LetSkiCoordinator
+    @StateObject private var coordinator: AnyCoordinator
     private let factory = LetSkiFactory()
     let columns = [GridItem(.flexible(minimum: 100))]
     let data = ["1", "2", "3"]
     
-    public init() {}
+    public init(factory: LetSkiFactoryProtocol) {
+        let coor = AnyCoordinator(factory.makeCoordinator())
+        _coordinator = StateObject(wrappedValue: coor)
+    }
+    
+//    public init(factory: LetSkiFactoryProtocol) {
+//        _coordinator = StateObject(wrappedValue: factory.makeCoordinator())
+//    }
     
     public var body: some View {
         NavigationStack(path: $coordinator.path) {
@@ -47,6 +55,6 @@ public struct LetSkiView: View {
     }
 }
 
-#Preview {
-    LetSkiView()
-}
+//#Preview {
+//    LetSkiMainView()
+//}
