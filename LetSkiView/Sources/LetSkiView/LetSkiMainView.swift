@@ -14,44 +14,49 @@ public struct Item: Hashable {
 }
 
 public struct LetSkiMainView: View {
-//    @StateObject private var coordinator: LetSkiCoordinator
+    
+    // MARK: - Private properties
     @StateObject private var coordinator: AnyCoordinator
-    private let factory = LetSkiFactory()
+    private let factory: LetSkiFactory
+//    private let factory = LetSkiFactory()
+    
+    // MARK: - Public properties
     let columns = [GridItem(.flexible(minimum: 100))]
     let data = ["1", "2", "3"]
     
-    public init(factory: LetSkiFactoryProtocol) {
-        let coor = AnyCoordinator(factory.makeCoordinator())
-        _coordinator = StateObject(wrappedValue: coor)
+    public init(factory: LetSkiFactory) {
+        self.factory = factory
+        let letSkiCoordinator = AnyCoordinator(factory.makeCoordinator())
+        _coordinator = StateObject(wrappedValue: letSkiCoordinator)
     }
     
-//    public init(factory: LetSkiFactoryProtocol) {
-//        _coordinator = StateObject(wrappedValue: factory.makeCoordinator())
-//    }
-    
+    // MARK: - View
     public var body: some View {
         NavigationStack(path: $coordinator.path) {
-            LazyVGrid(columns: columns, content: {
-                ForEach(data, id: \.self) { item in
-                    Label("Let's ski! \(item)", systemImage: "snow")
-                        .onTapGesture {
-                            coordinator.push(.chooseSki)
-                        }
-                    Spacer()
+            VStack {
+                LazyVGrid(columns: columns, content: {
+                    ForEach(data, id: \.self) { item in
+                        LetSkiCollection()
+                            .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
+                        Spacer()
+                            
+                    }
+                })
+                .toolbar(content: {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        ProfileButton()
+                    }
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Text("Let's ski!")
+                    }
+                })
+                .navigationDestination(for: LetSkiDestination.self) { destination in
+                    factory.makeView(for: destination)
+                        .environmentObject(coordinator)
                 }
-            })
-//            .navigationTitle("This is a SKI")
-//            .toolbar {
-//                ToolbarItem(placement: .topBarLeading) {
-//                    Button("Back") {
-//                        coordinator.path.removeLast()
-//                    }
-//                }
-//            }
-            .navigationDestination(for: LetSkiDestination.self) { destination in
-                factory.makeView(for: destination)
             }
         }
+        .environmentObject(coordinator)
     }
 }
 

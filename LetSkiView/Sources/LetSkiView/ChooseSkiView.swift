@@ -8,11 +8,28 @@
 import SwiftUI
 
 struct ChooseSkiView: View {
+    @EnvironmentObject private var coordinator: AnyCoordinator
+    private let item: String
+    
+    init(item: String) {
+        self.item = item
+    }
+    
     var body: some View {
-        Text("Choose a ski to customize")
+        Text(item)
+            .navigationBarBackButtonHidden(true)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button(action: {
+                        coordinator.pop() // Custom back navigation
+                    }) {
+                        Label("Back", systemImage: "chevron.left")
+                    }
+                }
+            }
     }
 }
 
-#Preview {
-    ChooseSkiView()
-}
+//#Preview {
+//    ChooseSkiView(item: "Hello")
+//}

@@ -8,8 +8,8 @@
 import Foundation
 
 public enum LetSkiDestination: Hashable {
-    case myInventory
-    case prepare
-    case chooseSki
-    case diary
+    case myInventory(String)
+    case prepare(String)
+    case chooseSki(String)
+    case diary(String)
 }
