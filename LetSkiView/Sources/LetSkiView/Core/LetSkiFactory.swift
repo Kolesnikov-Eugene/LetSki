@@ -8,23 +8,6 @@
 import Foundation
 import SwiftUI
 
-//protocol LetSkiFactoryProtocol {
-//    associatedtype DestinationView: View
-//    
-//    @MainActor
-//    func makeView(for destination: LetSkiDestination, item: String) -> DestinationView
-//}
-
-//public protocol LetSkiFactoryProtocol {
-//    associatedtype SkiView: some View
-//    func makeView(
-//        for destination: LetSkiDestination,
-//        item: String
-//    ) -> any View
-//    func makeCoordinator() -> LetSkiCoordinator
-////    func makeLetSkiViewModel() -> any LetSkiViewModelProtocol
-//}
-
 public final class LetSkiFactory {
     
     public init() {}
@@ -48,3 +31,19 @@ public final class LetSkiFactory {
     }
 }
 
+//protocol LetSkiFactoryProtocol {
+//    associatedtype DestinationView: View
+//
+//    @MainActor
+//    func makeView(for destination: LetSkiDestination, item: String) -> DestinationView
+//}
+
+//public protocol LetSkiFactoryProtocol {
+//    associatedtype SkiView: some View
+//    func makeView(
+//        for destination: LetSkiDestination,
+//        item: String
+//    ) -> any View
+//    func makeCoordinator() -> LetSkiCoordinator
+////    func makeLetSkiViewModel() -> any LetSkiViewModelProtocol
+//}

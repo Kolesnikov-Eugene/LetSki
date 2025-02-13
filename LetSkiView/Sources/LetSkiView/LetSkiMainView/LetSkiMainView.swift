@@ -18,11 +18,10 @@ public struct LetSkiMainView: View {
     // MARK: - Private properties
     @StateObject private var coordinator: AnyCoordinator
     private let factory: LetSkiFactory
-//    private let factory = LetSkiFactory()
     
     // MARK: - Public properties
     let columns = [GridItem(.flexible(minimum: 100))]
-    let data = ["1", "2", "3"]
+    let data = ["1", "2"]
     
     public init(factory: LetSkiFactory) {
         self.factory = factory
@@ -33,27 +32,25 @@ public struct LetSkiMainView: View {
     // MARK: - View
     public var body: some View {
         NavigationStack(path: $coordinator.path) {
-            VStack {
+            ScrollView(.vertical) {
                 LazyVGrid(columns: columns, content: {
                     ForEach(data, id: \.self) { item in
-                        LetSkiCollection()
-                            .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
-                        Spacer()
-                            
+                        LetSkiCollection(data: ["One", "Two", "Three", "Four", "Five"])
+                            .padding(.init(top: 10, leading: 10, bottom: 0, trailing: 10))
                     }
                 })
-                .toolbar(content: {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        ProfileButton()
-                    }
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Text("Let's ski!")
-                    }
-                })
-                .navigationDestination(for: LetSkiDestination.self) { destination in
-                    factory.makeView(for: destination)
-                        .environmentObject(coordinator)
+            }
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    ProfileButton()
                 }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Text("Let's ski!")
+                }
+            })
+            .navigationDestination(for: LetSkiDestination.self) { destination in
+                factory.makeView(for: destination)
+                    .environmentObject(coordinator)
             }
         }
         .environmentObject(coordinator)
