@@ -13,7 +13,8 @@ public final class LetSkiFactory {
     public init() {}
     
     @MainActor
-    public func makeView(for destination: LetSkiDestination) -> some View {
+    @ViewBuilder
+    func makeView(for destination: LetSkiDestination) -> some View {
         switch destination {
         case .chooseSki(let item):
             ChooseSkiView(item: item)
@@ -23,6 +24,8 @@ public final class LetSkiFactory {
             ChooseSkiView(item: item)
         case .diary(let item):
             ChooseSkiView(item: item)
+        case .skiDetail:
+            SkiDetailView()
         }
     }
     

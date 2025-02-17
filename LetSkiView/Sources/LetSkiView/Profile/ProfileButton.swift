@@ -16,6 +16,10 @@ struct ProfileButton: View {
                 .resizable()
                 .frame(width: 40, height: 40)
                 .foregroundStyle(.teal)
+                .overlay {
+                    Circle().stroke(.white, lineWidth: 3)
+                }
+                .shadow(color: Color(UIColor.lightGray.cgColor), radius: 3)
         }
     }
 }

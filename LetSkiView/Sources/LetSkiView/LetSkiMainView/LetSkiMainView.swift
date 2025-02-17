@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import ComposableArchitecture
+//import ComposableArchitecture
 
 public struct Item: Hashable {
     let id: UUID
