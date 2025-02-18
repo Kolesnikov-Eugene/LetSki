@@ -16,6 +16,7 @@ enum TabItem: Hashable {
 
 struct ContentView: View {
     @State private var selectedTab: TabItem = .ski
+    let mapViewBuilder: MapViewBuilder
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -27,7 +28,7 @@ struct ContentView: View {
                     )
                 }
                 .tag(TabItem.ski)
-            MapView()
+            mapViewBuilder.mapView
                 .tabItem {
                     Label(
                         "Map",
@@ -40,6 +41,6 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}
