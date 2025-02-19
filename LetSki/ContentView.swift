@@ -22,6 +22,7 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $selectedTab) {
             letSkiViewBuilder.letSkiView
+                .background(Color("splash").ignoresSafeArea())
                 .tabItem {
                     Label(
                         "LetSKi",
@@ -38,6 +39,7 @@ struct ContentView: View {
                 }
                 .tag(TabItem.map)
         }
+        .background(Color("splash").ignoresSafeArea())
         .tint(.blue)
     }
 }

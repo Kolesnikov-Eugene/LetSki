@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-//import ComposableArchitecture
+import ComposableArchitecture
 
 public struct Item: Hashable {
     let id: UUID
@@ -32,22 +32,28 @@ public struct LetSkiMainView: View {
     // MARK: - View
     public var body: some View {
         NavigationStack(path: $coordinator.path) {
-            ScrollView(.vertical) {
-                LazyVGrid(columns: columns, content: {
-                    ForEach(data, id: \.self) { item in
-                        LetSkiCollection(data: ["One", "Two", "Three", "Four", "Five"])
-                            .padding(.init(top: 10, leading: 10, bottom: 0, trailing: 10))
+            ZStack {
+                Color("splash").ignoresSafeArea()
+                
+                ScrollView(.vertical) {
+                    LazyVGrid(columns: columns) {
+                        ForEach(data, id: \.self) { item in
+                            LetSkiCollection(data: ["One", "Two", "Three", "Four", "Five"])
+                                .padding(.init(top: 10, leading: 10, bottom: 0, trailing: 10))
+                        }
                     }
-                })
+                }
             }
-            .toolbar(content: {
+            .toolbarBackground(Color("splash"), for: .navigationBar)
+//            .toolbarBackground(.hidden, for: .automatic)
+            .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     ProfileButton()
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
                     Text("Let's ski!")
                 }
-            })
+            }
             .navigationDestination(for: LetSkiDestination.self) { destination in
                 factory.makeView(for: destination)
                     .environmentObject(coordinator)

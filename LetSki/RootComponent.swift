@@ -12,6 +12,12 @@ import MapView
 
 public class RootComponent: BootstrapComponent {
     
+    public var splashView: some View {
+        SplashScreenView(
+            viewBuilder: self
+        )
+    }
+    
     public var rootView: some View {
         ContentView(
             mapViewBuilder: mapViewComponent,

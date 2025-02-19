@@ -46,9 +46,22 @@
 		4486DF1A2D51450B00BEB9BC /* LetSkiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LetSkiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		44EF3B5B2D66667E00175C9D /* Exceptions for "LetSki" folder in "LetSki" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 4486DEFF2D51450A00BEB9BC /* LetSki */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		4486DF022D51450A00BEB9BC /* LetSki */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				44EF3B5B2D66667E00175C9D /* Exceptions for "LetSki" folder in "LetSki" target */,
+			);
 			path = LetSki;
 			sourceTree = "<group>";
 		};
@@ -473,6 +486,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LetSki/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Let'Ski";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -506,6 +520,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LetSki/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Let'Ski";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

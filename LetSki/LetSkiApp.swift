@@ -10,13 +10,22 @@ import Firebase
 import NeedleFoundation
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-  func application(_ application: UIApplication,
-                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
-  ) -> Bool {
-    registerProviderFactories()
-    FirebaseApp.configure()
-    return true
-  }
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
+    ) -> Bool {
+        registerProviderFactories()
+        FirebaseApp.configure()
+        
+        let appearance = UITabBarAppearance()
+//        appearance.configureWithTransparentBackground()
+        appearance.backgroundEffect = nil
+        appearance.backgroundColor = UIColor(resource: .splash)
+        
+        UITabBar.appearance().standardAppearance = appearance
+        UITabBar.appearance().scrollEdgeAppearance = appearance
+        
+        return true
+    }
 }
 
 @main
@@ -26,7 +35,7 @@ struct LetSkiApp: App {
     var body: some Scene {
         let rootComponent = RootComponent()
         WindowGroup {
-            rootComponent.rootView
+            rootComponent.splashView
         }
     }
 }

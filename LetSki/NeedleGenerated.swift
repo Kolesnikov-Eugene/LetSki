@@ -45,6 +45,7 @@ private func factorya7ae356c295633233319e3b0c44298fc1c149afb(_ component: Needle
 extension RootComponent: NeedleFoundation.Registration {
     public func registerItems() {
 
+        localTable["splashView-some View"] = { [unowned self] in self.splashView as Any }
         localTable["rootView-some View"] = { [unowned self] in self.rootView as Any }
         localTable["mapViewComponent-MapViewComponent"] = { [unowned self] in self.mapViewComponent as Any }
     }
