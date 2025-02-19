@@ -18,6 +18,6 @@ public protocol MapViewBuilder {
 public class MapViewComponent: Component<MapViewDependency>, MapViewBuilder {
     
     public var mapView: AnyView {
-        AnyView(MapView()) // Wrap MapView in AnyView
+        AnyView(MapView()) 
     }
 }

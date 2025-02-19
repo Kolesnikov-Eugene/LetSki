@@ -13,14 +13,17 @@ import MapView
 public class RootComponent: BootstrapComponent {
     
     public var rootView: some View {
-        ContentView(mapViewBuilder: mapViewComponent)
+        ContentView(
+            mapViewBuilder: mapViewComponent,
+            letSkiViewBuilder: letSkiViewComponent
+        )
     }
     
     public var mapViewComponent: MapViewComponent {
         MapViewComponent(parent: self)
     }
     
-//    var letSkiComponent: LetSkiComponent {
-//        return LetSkiComponent(parent: self)
-//    }
+    var letSkiViewComponent: LetSkiViewComponent {
+        LetSkiViewComponent(parent: self)
+    }
 }

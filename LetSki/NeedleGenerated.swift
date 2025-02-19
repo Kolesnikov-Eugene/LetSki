@@ -29,6 +29,17 @@ private class MapViewDependencya82bc19558e51cad91aeProvider: MapViewDependency {
 private func factory15962e156c94c97cb5a3e3b0c44298fc1c149afb(_ component: NeedleFoundation.Scope) -> AnyObject {
     return MapViewDependencya82bc19558e51cad91aeProvider()
 }
+private class LetSkiViewDependency1d145bf256ffefb06f1cProvider: LetSkiViewDependency {
+
+
+    init() {
+
+    }
+}
+/// ^->RootComponent->LetSkiViewComponent
+private func factorya7ae356c295633233319e3b0c44298fc1c149afb(_ component: NeedleFoundation.Scope) -> AnyObject {
+    return LetSkiViewDependency1d145bf256ffefb06f1cProvider()
+}
 
 #else
 extension RootComponent: NeedleFoundation.Registration {
@@ -39,6 +50,11 @@ extension RootComponent: NeedleFoundation.Registration {
     }
 }
 extension MapViewComponent: NeedleFoundation.Registration {
+    public func registerItems() {
+
+    }
+}
+extension LetSkiViewComponent: NeedleFoundation.Registration {
     public func registerItems() {
 
     }
@@ -61,6 +77,7 @@ private func registerProviderFactory(_ componentPath: String, _ factory: @escapi
 @inline(never) private func register1() {
     registerProviderFactory("^->RootComponent", factoryEmptyDependencyProvider)
     registerProviderFactory("^->RootComponent->MapViewComponent", factory15962e156c94c97cb5a3e3b0c44298fc1c149afb)
+    registerProviderFactory("^->RootComponent->LetSkiViewComponent", factorya7ae356c295633233319e3b0c44298fc1c149afb)
 }
 #endif
 

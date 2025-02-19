@@ -17,10 +17,11 @@ enum TabItem: Hashable {
 struct ContentView: View {
     @State private var selectedTab: TabItem = .ski
     let mapViewBuilder: MapViewBuilder
+    let letSkiViewBuilder: LetSkiViewBuilder
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            LetSkiMainView(factory: LetSkiFactory())
+            letSkiViewBuilder.letSkiView
                 .tabItem {
                     Label(
                         "LetSKi",
