@@ -9,13 +9,23 @@ import SwiftUI
 
 struct SplashScreenView: View {
     @State private var isActive = false
+    @StateObject var loggedInState: Session
     var viewBuilder: RootComponent
+    
+    init(viewBuilder: RootComponent) {
+        self.viewBuilder = viewBuilder
+        _loggedInState = StateObject(wrappedValue: Session())
+    }
     
     var body: some View {
         ZStack {
-            if isActive {
+            if isActive && loggedInState.loggedIn {
                 viewBuilder.rootView
                     .transition(.opacity)
+            } else if isActive && !loggedInState.loggedIn {
+                viewBuilder.logInView
+                    .transition(.opacity)
+                    .environmentObject(loggedInState)
             } else {
                 ZStack {
                     Color("splash").ignoresSafeArea()

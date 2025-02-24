@@ -19,6 +19,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         let appearance = UITabBarAppearance()
 //        appearance.configureWithTransparentBackground()
         appearance.backgroundEffect = nil
+        appearance.shadowColor = nil
+        appearance.shadowImage = nil
         appearance.backgroundColor = UIColor(resource: .splash)
         
         UITabBar.appearance().standardAppearance = appearance

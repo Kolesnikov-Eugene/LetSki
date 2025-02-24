@@ -25,6 +25,10 @@ public class RootComponent: BootstrapComponent {
         )
     }
     
+    public var logInView: some View {
+        LogInView()
+    }
+    
     public var mapViewComponent: MapViewComponent {
         MapViewComponent(parent: self)
     }

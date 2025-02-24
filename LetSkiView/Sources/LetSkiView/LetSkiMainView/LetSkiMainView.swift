@@ -13,6 +13,12 @@ public struct Item: Hashable {
     let name: String
 }
 
+public enum LetSkiMainState {
+    case loading
+    case loaded
+    case failed(Error)
+}
+
 public struct LetSkiMainView: View {
     
     // MARK: - Private properties
@@ -21,7 +27,7 @@ public struct LetSkiMainView: View {
     
     // MARK: - Public properties
     let columns = [GridItem(.flexible(minimum: 100))]
-    let data = ["1", "2"]
+    private let data: LetSkiItemModel = LetSkiItemModel()
     
     public init(factory: LetSkiFactory) {
         self.factory = factory
@@ -37,8 +43,8 @@ public struct LetSkiMainView: View {
                 
                 ScrollView(.vertical) {
                     LazyVGrid(columns: columns) {
-                        ForEach(data, id: \.self) { item in
-                            LetSkiCollection(data: ["One", "Two", "Three", "Four", "Five"])
+                        ForEach(data.categories.keys.sorted(), id: \.self) { key in
+                            LetSkiCollection(category: key, data: data.categories[key] ?? [])
                                 .padding(.init(top: 10, leading: 10, bottom: 0, trailing: 10))
                         }
                     }

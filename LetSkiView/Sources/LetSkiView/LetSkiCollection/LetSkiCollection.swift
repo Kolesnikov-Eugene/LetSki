@@ -7,29 +7,26 @@
 
 import SwiftUI
 
-public struct LetSkiCollection: View {
+struct LetSkiCollection: View {
     @EnvironmentObject var coordinator: AnyCoordinator
-    private var columns = [GridItem(.flexible()), GridItem(.flexible())] // 2 flexible rows
-    public var data: [String]
+    var columns = [GridItem(.flexible()), GridItem(.flexible())] // 2 flexible rows
+    var category: String
+    var data: [LetSkiMenuItem]
     
-    public init(data: [String]) {
-        self.data = data
-    }
-    
-    public var body: some View {
+    var body: some View {
         VStack(alignment: .leading) {
-            Text("Item set")
+            Text(category)
                 .font(.headline)
                 .foregroundStyle(.primary)
                 .padding(.leading, 10)
             LazyVGrid(columns: columns, spacing: 15) {
                 ForEach(data, id: \.self) { item in
-                    LetSkiCollectionCell(item: item)
+                    LetSkiCollectionCell(item: item.name, image: item.image)
                         .frame(minWidth: 80, maxWidth: .infinity, minHeight: 150) // Flexible cell width
                         .background(Color.gray.opacity(0.2))
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                         .onTapGesture {
-                            coordinator.push(.chooseSki(item))
+                            coordinator.push(.chooseSki(item.name))
                         }
                 }
             }
@@ -37,6 +34,6 @@ public struct LetSkiCollection: View {
     }
 }
 
-#Preview {
-    LetSkiCollection(data: ["1", "2", "3", "4", "5"])
-}
+//#Preview {
+//    LetSkiCollection(data: ["1", "2", "3", "4", "5"])
+//}
