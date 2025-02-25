@@ -6,10 +6,8 @@
 //
 
 import SwiftUI
+import LetSkiShared
 
-class Session: ObservableObject {
-    @Published var loggedIn: Bool = false
-}
 
 struct LogInView: View {
     @EnvironmentObject var loggedInState: Session
@@ -18,6 +16,9 @@ struct LogInView: View {
             Text("Please, log in")
             Button("Log In") {
                 loggedInState.loggedIn = true
+            }
+            Button("Stay private") {
+                loggedInState.loggedIn = false
             }
             .padding()
         }

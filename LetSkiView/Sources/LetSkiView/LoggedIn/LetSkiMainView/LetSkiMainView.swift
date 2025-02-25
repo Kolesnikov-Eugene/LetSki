@@ -7,6 +7,8 @@
 
 import SwiftUI
 import ComposableArchitecture
+import LetSkiShared
+
 
 public struct Item: Hashable {
     let id: UUID
@@ -23,6 +25,7 @@ public struct LetSkiMainView: View {
     
     // MARK: - Private properties
     @StateObject private var coordinator: AnyCoordinator
+    @EnvironmentObject public var loggedInState: Session
     private let factory: LetSkiFactory
     
     // MARK: - Public properties

@@ -46,6 +46,7 @@ extension RootComponent: NeedleFoundation.Registration {
     public func registerItems() {
 
         localTable["splashView-some View"] = { [unowned self] in self.splashView as Any }
+        localTable["contentView-some View"] = { [unowned self] in self.contentView as Any }
         localTable["rootView-some View"] = { [unowned self] in self.rootView as Any }
         localTable["logInView-some View"] = { [unowned self] in self.logInView as Any }
         localTable["mapViewComponent-MapViewComponent"] = { [unowned self] in self.mapViewComponent as Any }

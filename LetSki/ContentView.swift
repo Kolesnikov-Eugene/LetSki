@@ -16,12 +16,14 @@ enum TabItem: Hashable {
 
 struct ContentView: View {
     @State private var selectedTab: TabItem = .ski
+//    @EnvironmentObject public var loggedInState: Session
     let mapViewBuilder: MapViewBuilder
     let letSkiViewBuilder: LetSkiViewBuilder
     
     var body: some View {
         TabView(selection: $selectedTab) {
             letSkiViewBuilder.letSkiView
+//                .environmentObject(loggedInState)
                 .background(Color("splash").ignoresSafeArea())
                 .tabItem {
                     Label(
@@ -39,6 +41,7 @@ struct ContentView: View {
                 }
                 .tag(TabItem.map)
         }
+//        .environmentObject(loggedInState)
         .background(Color("splash").ignoresSafeArea())
         .tint(.blue)
     }

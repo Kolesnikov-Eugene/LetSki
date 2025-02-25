@@ -13,16 +13,18 @@ import MapView
 public class RootComponent: BootstrapComponent {
     
     public var splashView: some View {
-        SplashScreenView(
-            viewBuilder: self
-        )
+        SplashScreenView()
     }
     
-    public var rootView: some View {
+    public var contentView: some View {
         ContentView(
             mapViewBuilder: mapViewComponent,
             letSkiViewBuilder: letSkiViewComponent
         )
+    }
+    
+    public var rootView: some View {
+        RootView(viewBuilder: self)
     }
     
     public var logInView: some View {
