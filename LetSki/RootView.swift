@@ -26,7 +26,6 @@ struct RootView: View {
     var body: some View {
         ZStack {
             mainContent
-//                .environmentObject(loggedInState)
         }
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
@@ -42,7 +41,6 @@ struct RootView: View {
             ),
             content: {
                 viewBuilder.logInView
-//                    .environmentObject(loggedInState)
             }
         )
     }
@@ -52,7 +50,6 @@ struct RootView: View {
     private var mainContent: some View {
         if isActive {
             viewBuilder.contentView
-//                .environmentObject(loggedInState)
                 .transition(.opacity)
         } else {
             viewBuilder.splashView

@@ -24,7 +24,7 @@ struct ContentView: View {
         TabView(selection: $selectedTab) {
             letSkiViewBuilder.letSkiView
 //                .environmentObject(loggedInState)
-                .background(Color("splash").ignoresSafeArea())
+//                .background(Color("splash").ignoresSafeArea())
                 .tabItem {
                     Label(
                         "LetSKi",
@@ -42,8 +42,8 @@ struct ContentView: View {
                 .tag(TabItem.map)
         }
 //        .environmentObject(loggedInState)
-        .background(Color("splash").ignoresSafeArea())
-        .tint(.blue)
+//        .background(Color("splash").ignoresSafeArea())
+        .tint(Color("items-background"))
     }
 }
 

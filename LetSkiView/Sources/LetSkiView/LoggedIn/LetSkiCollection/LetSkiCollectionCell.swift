@@ -13,10 +13,11 @@ struct LetSkiCollectionCell: View {
     
     var body: some View {
         ZStack() {
-            Color("background-main", bundle: .module).edgesIgnoringSafeArea(.all)
+            Color("cell-background", bundle: .module).edgesIgnoringSafeArea(.all)
             VStack(alignment: .leading) {
                 HStack {
                     image
+                        .foregroundStyle(Color("tint-main", bundle: .module))
                         .frame(width: 25, height: 25)
                     Spacer()
                     

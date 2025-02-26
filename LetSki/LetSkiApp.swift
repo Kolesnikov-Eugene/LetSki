@@ -14,20 +14,26 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
     ) -> Bool {
+        // MARK: - init Needle Root component
         registerProviderFactories()
+        // MARK: - configure firebase
         FirebaseApp.configure()
+        // MARK: - configure tabbar appearance
+        configureTabBarAppearance()
         
+        return true
+    }
+    
+    private func configureTabBarAppearance() {
         let appearance = UITabBarAppearance()
 //        appearance.configureWithTransparentBackground()
         appearance.backgroundEffect = nil
         appearance.shadowColor = nil
         appearance.shadowImage = nil
-        appearance.backgroundColor = UIColor(resource: .splash)
-        
+        appearance.backgroundColor = .clear
+//        appearance.backgroundColor = UIColor(resource: .splash)
         UITabBar.appearance().standardAppearance = appearance
         UITabBar.appearance().scrollEdgeAppearance = appearance
-        
-        return true
     }
 }
 

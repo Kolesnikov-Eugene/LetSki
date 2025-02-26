@@ -11,10 +11,10 @@ struct SplashScreenView: View {
     
     var body: some View {
         ZStack {
-            Color("splash").ignoresSafeArea()
-            Image("ski-back")
-                .renderingMode(.original)
-            
+            Color("main-background", bundle: .main).ignoresSafeArea()
+            Image("anim")
+                .resizable()
+                .scaledToFit()
         }
     }
 }

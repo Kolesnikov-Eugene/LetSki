@@ -27,10 +27,10 @@ public struct LetSkiMainView: View {
     @StateObject private var coordinator: AnyCoordinator
     @EnvironmentObject public var loggedInState: Session
     private let factory: LetSkiFactory
+    private let data: LetSkiItemModel = LetSkiItemModel()
     
     // MARK: - Public properties
     let columns = [GridItem(.flexible(minimum: 100))]
-    private let data: LetSkiItemModel = LetSkiItemModel()
     
     public init(factory: LetSkiFactory) {
         self.factory = factory
@@ -42,7 +42,7 @@ public struct LetSkiMainView: View {
     public var body: some View {
         NavigationStack(path: $coordinator.path) {
             ZStack {
-                Color("splash").ignoresSafeArea()
+                Color("main-background", bundle: .module).ignoresSafeArea()
                 
                 ScrollView(.vertical) {
                     LazyVGrid(columns: columns) {
@@ -53,7 +53,7 @@ public struct LetSkiMainView: View {
                     }
                 }
             }
-            .toolbarBackground(Color("splash"), for: .navigationBar)
+//            .toolbarBackground(Color("splash"), for: .navigationBar)
 //            .toolbarBackground(.hidden, for: .automatic)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
