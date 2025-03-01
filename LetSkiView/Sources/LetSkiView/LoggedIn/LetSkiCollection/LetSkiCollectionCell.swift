@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct LetSkiCollectionCell: View {
-    let item: String
-    let image: Image
+    let item: LetSkiMenuItem
     
     var body: some View {
         ZStack() {
             Color("cell-background", bundle: .module).edgesIgnoringSafeArea(.all)
             VStack(alignment: .leading) {
                 HStack {
-                    image
+                    item.image
                         .foregroundStyle(Color("tint-main", bundle: .module))
                         .frame(width: 25, height: 25)
+                    Text(item.itemName)
+                        .font(.headline)
                     Spacer()
                     
                 }
@@ -26,7 +27,9 @@ struct LetSkiCollectionCell: View {
                 .padding(.top, 10)
                 
                 HStack {
-                    Text(item)
+                    Text(item.desscription)
+                        .font(.subheadline)
+                        .fontWeight(.thin)
                 }
                 .padding(.leading, 10)
                 .padding(.top, 10)

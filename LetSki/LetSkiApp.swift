@@ -30,7 +30,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         appearance.backgroundEffect = nil
         appearance.shadowColor = nil
         appearance.shadowImage = nil
-        appearance.backgroundColor = .clear
+        appearance.backgroundColor = UIColor(resource: .mainBackground)
 //        appearance.backgroundColor = UIColor(resource: .splash)
         UITabBar.appearance().standardAppearance = appearance
         UITabBar.appearance().scrollEdgeAppearance = appearance

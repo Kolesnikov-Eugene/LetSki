@@ -9,7 +9,8 @@ import SwiftUI
 
 struct LetSkiCollection: View {
     @EnvironmentObject var coordinator: AnyCoordinator
-    var columns = [GridItem(.flexible()), GridItem(.flexible())] // 2 flexible rows
+//    var columns = [GridItem(.flexible()), GridItem(.flexible())] // 2 flexible rows
+    private let columns = [GridItem(.flexible())]
     var category: String
     var data: [LetSkiMenuItem]
     
@@ -21,12 +22,12 @@ struct LetSkiCollection: View {
                 .padding(.leading, 10)
             LazyVGrid(columns: columns, spacing: 15) {
                 ForEach(data, id: \.self) { item in
-                    LetSkiCollectionCell(item: item.name, image: item.image)
+                    LetSkiCollectionCell(item: item)
                         .frame(minWidth: 80, maxWidth: .infinity, minHeight: 150) // Flexible cell width
                         .background(Color.gray.opacity(0.2))
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                         .onTapGesture {
-                            coordinator.push(.chooseSki(item.name))
+                            coordinator.push(.chooseSki(item.itemName))
                         }
                 }
             }
