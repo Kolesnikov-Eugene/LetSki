@@ -5,20 +5,58 @@ import PackageDescription
 
 let package = Package(
     name: "MapView",
+    platforms: [.iOS(.v17)],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "MapView",
-            targets: ["MapView"]),
+            targets: ["MapView"]
+        ),
+    ],
+    dependencies: [
+        .package(url: "https://github.com/uber/needle.git", .upToNextMajor(from: "0.25.1")),
+        .package(url: "https://github.com/pointfreeco/swift-composable-architecture.git", .upToNextMajor(from: "1.17.1")),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "MapView"),
+            name: "MapView",
+            dependencies: [
+                .product(name: "NeedleFoundation", package: "needle"),
+                .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+            ]
+        ),
         .testTarget(
             name: "MapViewTests",
             dependencies: ["MapView"]
         ),
     ]
 )
+
+//import PackageDescription
+//
+//let package = Package(
+//    name: "LetSkiView",
+//    platforms: [.iOS(.v17)],
+//    products: [
+//        .library(
+//            name: "MapView",
+//            targets: ["MapView"]
+//        ),
+//    ],
+//    dependencies: [
+//        .package(url: "https://github.com/uber/needle.git", from: "0.25.1"),
+//        .package(url: "https://github.com/pointfreeco/swift-composable-architecture.git", from: "1.17.1"),
+//    ],
+//    targets: [
+//        .target(
+//            name: "MapView",
+//            dependencies: [
+//                .product(name: "NeedleFoundation", package: "needle"),
+//                .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+//            ]
+//        ),
+//        .testTarget(
+//            name: "MapView",
+//            dependencies: ["MapView"]
+//        ),
+//    ]
+//)
