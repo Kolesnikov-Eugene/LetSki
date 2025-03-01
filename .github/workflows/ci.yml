@@ -23,38 +23,22 @@ jobs:
       - name: Debug - Check Xcode Version
         run: xcodebuild -version
 
+      - name: Install Needle
+        run: brew install needle
+
       - name: Clean Build Folder
         run: |
           xcodebuild -skipMacroValidation clean -scheme LetSki
           rm -rf ~/Library/Developer/Xcode/DerivedData/*
 
-      # - name: Force Swift 5.9 (Prevent Swift 6 Issues)
-      #   run: echo "swift-tools-version:5.9" > .swift-version
-
       - name: Resolve Swift Packages
         run: xcodebuild -skipMacroValidation -resolvePackageDependencies -scheme LetSki
 
-      # - name: Build Swift Macros
-      #   run: |
-      #     xcodebuild -skipMacroValidation build \
-      #       -scheme LetSki \
-      #       -target ComposableArchitectureMacros \
-      #       -destination 'platform=macOS'
+      - name: Generate Needle Dependencies
+        run: needle generate "$GITHUB_WORKSPACE/NeedleGenerated.swift" "$GITHUB_WORKSPACE"
 
-      #     xcodebuild -skipMacroValidation build \
-      #       -scheme LetSki \
-      #       -target CasePathsMacros \
-      #       -destination 'platform=macOS'
-
-      #     xcodebuild -skipMacroValidation build \
-      #       -scheme LetSki \
-      #       -target DependenciesMacrosPlugin \
-      #       -destination 'platform=macOS'
-
-      #     xcodebuild -skipMacroValidation build \
-      #       -scheme LetSki \
-      #       -target PerceptionMacros \
-      #       -destination 'platform=macOS'
+      - name: Verify NeedleGenerated.swift exists
+        run: ls -l "$GITHUB_WORKSPACE"
 
       - name: Build the project
         run: |

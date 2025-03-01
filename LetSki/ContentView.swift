@@ -6,19 +6,47 @@
 //
 
 import SwiftUI
+import LetSkiView
+import MapView
+
+enum TabItem: Hashable {
+    case ski
+    case map
+}
 
 struct ContentView: View {
+    @State private var selectedTab: TabItem = .ski
+//    @EnvironmentObject public var loggedInState: Session
+    let mapViewBuilder: MapViewBuilder
+    let letSkiViewBuilder: LetSkiViewBuilder
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView(selection: $selectedTab) {
+            letSkiViewBuilder.letSkiView
+//                .environmentObject(loggedInState)
+//                .background(Color("splash").ignoresSafeArea())
+                .tabItem {
+                    Label(
+                        "LetSKi",
+                        systemImage: "figure.skiing.crosscountry.circle"
+                    )
+                }
+                .tag(TabItem.ski)
+            mapViewBuilder.mapView
+                .tabItem {
+                    Label(
+                        "Map",
+                        systemImage: "map"
+                    )
+                }
+                .tag(TabItem.map)
         }
-        .padding()
+//        .environmentObject(loggedInState)
+//        .background(Color("splash").ignoresSafeArea())
+        .tint(Color("items-background"))
     }
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}

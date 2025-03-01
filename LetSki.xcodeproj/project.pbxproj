@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		44005D702D52A11500EF644D /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 44005D6F2D52A11500EF644D /* FirebaseAppDistribution-Beta */; };
-		44005D722D52A11500EF644D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 44005D712D52A11500EF644D /* FirebaseAuth */; };
-		44005D742D52A11500EF644D /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 44005D732D52A11500EF644D /* FirebaseCore */; };
-		44005D762D52A11500EF644D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 44005D752D52A11500EF644D /* FirebaseFirestore */; };
-		44005D782D52A11500EF644D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 44005D772D52A11500EF644D /* FirebaseStorage */; };
-		44005D7B2D52B1EE00EF644D /* GeoFire in Frameworks */ = {isa = PBXBuildFile; productRef = 44005D7A2D52B1EE00EF644D /* GeoFire */; };
-		44005D7D2D52B1EE00EF644D /* GeoFireUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 44005D7C2D52B1EE00EF644D /* GeoFireUtils */; };
-		4438F22D2D5151970024645E /* NeedleFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 4438F22C2D5151970024645E /* NeedleFoundation */; };
-		4438F22F2D5151970024645E /* NeedleFoundationTest in Frameworks */ = {isa = PBXBuildFile; productRef = 4438F22E2D5151970024645E /* NeedleFoundationTest */; };
-		4438F2322D5151F90024645E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 4438F2312D5151F90024645E /* ComposableArchitecture */; };
-		4438F23D2D51576A0024645E /* LetSkiView in Frameworks */ = {isa = PBXBuildFile; productRef = 4438F23C2D51576A0024645E /* LetSkiView */; };
-		4438F2412D5157EA0024645E /* MapView in Frameworks */ = {isa = PBXBuildFile; productRef = 4438F2402D5157EA0024645E /* MapView */; };
+		444ED0CF2D6E451A001467DB /* MapView in Frameworks */ = {isa = PBXBuildFile; productRef = 444ED0CE2D6E451A001467DB /* MapView */; };
+		444ED0D12D6E452C001467DB /* LetSkiView in Frameworks */ = {isa = PBXBuildFile; productRef = 444ED0D02D6E452C001467DB /* LetSkiView */; };
+		444ED0D52D6E461E001467DB /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 444ED0D42D6E461E001467DB /* ComposableArchitecture */; };
+		444ED0D82D6E4642001467DB /* NeedleFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 444ED0D72D6E4642001467DB /* NeedleFoundation */; };
+		444ED0DA2D6E4642001467DB /* NeedleFoundationTest in Frameworks */ = {isa = PBXBuildFile; productRef = 444ED0D92D6E4642001467DB /* NeedleFoundationTest */; };
+		444ED0DC2D6E4687001467DB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 444ED0DB2D6E4687001467DB /* FirebaseAuth */; };
+		444ED0DE2D6E4687001467DB /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 444ED0DD2D6E4687001467DB /* FirebaseCore */; };
+		444ED0E02D6E4687001467DB /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 444ED0DF2D6E4687001467DB /* FirebaseDatabase */; };
+		444ED0E22D6E4687001467DB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 444ED0E12D6E4687001467DB /* FirebaseFirestore */; };
+		444ED0E42D6E4687001467DB /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 444ED0E32D6E4687001467DB /* FirebaseFirestoreCombine-Community */; };
+		444ED0E62D6E4687001467DB /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 444ED0E52D6E4687001467DB /* FirebaseStorage */; };
+		444ED0F52D6E65D0001467DB /* LetSkiShared in Frameworks */ = {isa = PBXBuildFile; productRef = 444ED0F42D6E65D0001467DB /* LetSkiShared */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,14 +41,28 @@
 /* Begin PBXFileReference section */
 		4438F2372D5156B80024645E /* LetSkiView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = LetSkiView; sourceTree = "<group>"; };
 		4438F23E2D5157CD0024645E /* MapView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MapView; sourceTree = "<group>"; };
+		444ED0F22D6E653D001467DB /* LetSkiShared */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = LetSkiShared; sourceTree = "<group>"; };
 		4486DF002D51450A00BEB9BC /* LetSki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetSki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4486DF102D51450B00BEB9BC /* LetSkiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LetSkiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4486DF1A2D51450B00BEB9BC /* LetSkiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LetSkiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		44EF3B5B2D66667E00175C9D /* Exceptions for "LetSki" folder in "LetSki" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 4486DEFF2D51450A00BEB9BC /* LetSki */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		4486DF022D51450A00BEB9BC /* LetSki */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				44EF3B5B2D66667E00175C9D /* Exceptions for "LetSki" folder in "LetSki" target */,
+			);
 			path = LetSki;
 			sourceTree = "<group>";
 		};
@@ -69,17 +83,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4438F2412D5157EA0024645E /* MapView in Frameworks */,
-				44005D722D52A11500EF644D /* FirebaseAuth in Frameworks */,
-				44005D782D52A11500EF644D /* FirebaseStorage in Frameworks */,
-				4438F23D2D51576A0024645E /* LetSkiView in Frameworks */,
-				44005D7B2D52B1EE00EF644D /* GeoFire in Frameworks */,
-				44005D702D52A11500EF644D /* FirebaseAppDistribution-Beta in Frameworks */,
-				44005D742D52A11500EF644D /* FirebaseCore in Frameworks */,
-				44005D762D52A11500EF644D /* FirebaseFirestore in Frameworks */,
-				44005D7D2D52B1EE00EF644D /* GeoFireUtils in Frameworks */,
-				4438F2322D5151F90024645E /* ComposableArchitecture in Frameworks */,
-				4438F22D2D5151970024645E /* NeedleFoundation in Frameworks */,
+				444ED0D82D6E4642001467DB /* NeedleFoundation in Frameworks */,
+				444ED0DC2D6E4687001467DB /* FirebaseAuth in Frameworks */,
+				444ED0CF2D6E451A001467DB /* MapView in Frameworks */,
+				444ED0F52D6E65D0001467DB /* LetSkiShared in Frameworks */,
+				444ED0E62D6E4687001467DB /* FirebaseStorage in Frameworks */,
+				444ED0E42D6E4687001467DB /* FirebaseFirestoreCombine-Community in Frameworks */,
+				444ED0D12D6E452C001467DB /* LetSkiView in Frameworks */,
+				444ED0DE2D6E4687001467DB /* FirebaseCore in Frameworks */,
+				444ED0E22D6E4687001467DB /* FirebaseFirestore in Frameworks */,
+				444ED0E02D6E4687001467DB /* FirebaseDatabase in Frameworks */,
+				444ED0D52D6E461E001467DB /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4438F22F2D5151970024645E /* NeedleFoundationTest in Frameworks */,
+				444ED0DA2D6E4642001467DB /* NeedleFoundationTest in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +118,7 @@
 		4486DEF72D51450A00BEB9BC = {
 			isa = PBXGroup;
 			children = (
+				444ED0F22D6E653D001467DB /* LetSkiShared */,
 				4438F23E2D5157CD0024645E /* MapView */,
 				4438F2372D5156B80024645E /* LetSkiView */,
 				4486DF022D51450A00BEB9BC /* LetSki */,
@@ -130,6 +145,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4486DF242D51450B00BEB9BC /* Build configuration list for PBXNativeTarget "LetSki" */;
 			buildPhases = (
+				444F860C2D653F7A00FF93D0 /* ShellScript */,
 				4486DEFC2D51450A00BEB9BC /* Sources */,
 				4486DEFD2D51450A00BEB9BC /* Frameworks */,
 				4486DEFE2D51450A00BEB9BC /* Resources */,
@@ -143,17 +159,17 @@
 			);
 			name = LetSki;
 			packageProductDependencies = (
-				4438F22C2D5151970024645E /* NeedleFoundation */,
-				4438F2312D5151F90024645E /* ComposableArchitecture */,
-				4438F23C2D51576A0024645E /* LetSkiView */,
-				4438F2402D5157EA0024645E /* MapView */,
-				44005D6F2D52A11500EF644D /* FirebaseAppDistribution-Beta */,
-				44005D712D52A11500EF644D /* FirebaseAuth */,
-				44005D732D52A11500EF644D /* FirebaseCore */,
-				44005D752D52A11500EF644D /* FirebaseFirestore */,
-				44005D772D52A11500EF644D /* FirebaseStorage */,
-				44005D7A2D52B1EE00EF644D /* GeoFire */,
-				44005D7C2D52B1EE00EF644D /* GeoFireUtils */,
+				444ED0CE2D6E451A001467DB /* MapView */,
+				444ED0D02D6E452C001467DB /* LetSkiView */,
+				444ED0D42D6E461E001467DB /* ComposableArchitecture */,
+				444ED0D72D6E4642001467DB /* NeedleFoundation */,
+				444ED0DB2D6E4687001467DB /* FirebaseAuth */,
+				444ED0DD2D6E4687001467DB /* FirebaseCore */,
+				444ED0DF2D6E4687001467DB /* FirebaseDatabase */,
+				444ED0E12D6E4687001467DB /* FirebaseFirestore */,
+				444ED0E32D6E4687001467DB /* FirebaseFirestoreCombine-Community */,
+				444ED0E52D6E4687001467DB /* FirebaseStorage */,
+				444ED0F42D6E65D0001467DB /* LetSkiShared */,
 			);
 			productName = LetSki;
 			productReference = 4486DF002D51450A00BEB9BC /* LetSki.app */;
@@ -177,7 +193,7 @@
 			);
 			name = LetSkiTests;
 			packageProductDependencies = (
-				4438F22E2D5151970024645E /* NeedleFoundationTest */,
+				444ED0D92D6E4642001467DB /* NeedleFoundationTest */,
 			);
 			productName = LetSkiTests;
 			productReference = 4486DF102D51450B00BEB9BC /* LetSkiTests.xctest */;
@@ -239,12 +255,12 @@
 			mainGroup = 4486DEF72D51450A00BEB9BC;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				4438F22B2D5151970024645E /* XCRemoteSwiftPackageReference "needle" */,
-				4438F2302D5151F90024645E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				4438F23B2D51576A0024645E /* XCLocalSwiftPackageReference "LetSkiView" */,
 				4438F23F2D5157EA0024645E /* XCLocalSwiftPackageReference "MapView" */,
-				44005D6E2D52A11500EF644D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				44005D792D52B1EE00EF644D /* XCRemoteSwiftPackageReference "geofire-objc" */,
+				444ED0D22D6E45A3001467DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				444ED0D32D6E461E001467DB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				444ED0D62D6E4642001467DB /* XCRemoteSwiftPackageReference "needle" */,
+				444ED0F32D6E65D0001467DB /* XCLocalSwiftPackageReference "LetSkiShared" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4486DF012D51450A00BEB9BC /* Products */;
@@ -281,6 +297,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		444F860C2D653F7A00FF93D0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/homebrew/bin/needle generate LetSki/NeedleGenerated.swift .\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4486DEFC2D51450A00BEB9BC /* Sources */ = {
@@ -449,12 +486,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"LetSki/Preview Content\"";
 				DEVELOPMENT_TEAM = NU9QMJ4324;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LetSki/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Let'Ski";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -481,12 +519,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"LetSki/Preview Content\"";
 				DEVELOPMENT_TEAM = NU9QMJ4324;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LetSki/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Let'Ski";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -627,34 +666,22 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = MapView;
 		};
+		444ED0F32D6E65D0001467DB /* XCLocalSwiftPackageReference "LetSkiShared" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = LetSkiShared;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		44005D6E2D52A11500EF644D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		444ED0D22D6E45A3001467DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 11.8.0;
+				minimumVersion = 11.8.1;
 			};
 		};
-		44005D792D52B1EE00EF644D /* XCRemoteSwiftPackageReference "geofire-objc" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/geofire-objc.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.1;
-			};
-		};
-		4438F22B2D5151970024645E /* XCRemoteSwiftPackageReference "needle" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/uber/needle.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.25.1;
-			};
-		};
-		4438F2302D5151F90024645E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+		444ED0D32D6E461E001467DB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
 			requirement = {
@@ -662,66 +689,73 @@
 				minimumVersion = 1.17.1;
 			};
 		};
+		444ED0D62D6E4642001467DB /* XCRemoteSwiftPackageReference "needle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uber/needle.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.25.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		44005D6F2D52A11500EF644D /* FirebaseAppDistribution-Beta */ = {
+		444ED0CE2D6E451A001467DB /* MapView */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 44005D6E2D52A11500EF644D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseAppDistribution-Beta";
+			productName = MapView;
 		};
-		44005D712D52A11500EF644D /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 44005D6E2D52A11500EF644D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		44005D732D52A11500EF644D /* FirebaseCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 44005D6E2D52A11500EF644D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCore;
-		};
-		44005D752D52A11500EF644D /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 44005D6E2D52A11500EF644D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		44005D772D52A11500EF644D /* FirebaseStorage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 44005D6E2D52A11500EF644D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseStorage;
-		};
-		44005D7A2D52B1EE00EF644D /* GeoFire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 44005D792D52B1EE00EF644D /* XCRemoteSwiftPackageReference "geofire-objc" */;
-			productName = GeoFire;
-		};
-		44005D7C2D52B1EE00EF644D /* GeoFireUtils */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 44005D792D52B1EE00EF644D /* XCRemoteSwiftPackageReference "geofire-objc" */;
-			productName = GeoFireUtils;
-		};
-		4438F22C2D5151970024645E /* NeedleFoundation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4438F22B2D5151970024645E /* XCRemoteSwiftPackageReference "needle" */;
-			productName = NeedleFoundation;
-		};
-		4438F22E2D5151970024645E /* NeedleFoundationTest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4438F22B2D5151970024645E /* XCRemoteSwiftPackageReference "needle" */;
-			productName = NeedleFoundationTest;
-		};
-		4438F2312D5151F90024645E /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4438F2302D5151F90024645E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
-		};
-		4438F23C2D51576A0024645E /* LetSkiView */ = {
+		444ED0D02D6E452C001467DB /* LetSkiView */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LetSkiView;
 		};
-		4438F2402D5157EA0024645E /* MapView */ = {
+		444ED0D42D6E461E001467DB /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = MapView;
+			package = 444ED0D32D6E461E001467DB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		444ED0D72D6E4642001467DB /* NeedleFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 444ED0D62D6E4642001467DB /* XCRemoteSwiftPackageReference "needle" */;
+			productName = NeedleFoundation;
+		};
+		444ED0D92D6E4642001467DB /* NeedleFoundationTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 444ED0D62D6E4642001467DB /* XCRemoteSwiftPackageReference "needle" */;
+			productName = NeedleFoundationTest;
+		};
+		444ED0DB2D6E4687001467DB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 444ED0D22D6E45A3001467DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		444ED0DD2D6E4687001467DB /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 444ED0D22D6E45A3001467DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		444ED0DF2D6E4687001467DB /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 444ED0D22D6E45A3001467DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		444ED0E12D6E4687001467DB /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 444ED0D22D6E45A3001467DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		444ED0E32D6E4687001467DB /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 444ED0D22D6E45A3001467DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		444ED0E52D6E4687001467DB /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 444ED0D22D6E45A3001467DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		444ED0F42D6E65D0001467DB /* LetSkiShared */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LetSkiShared;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
