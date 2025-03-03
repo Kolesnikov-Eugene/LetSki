@@ -28,12 +28,14 @@ public struct LetSkiMainView: View {
     @EnvironmentObject public var loggedInState: Session
     private let factory: LetSkiFactory
     private let data: LetSkiItemModel = LetSkiItemModel()
+    @Bindable var store: StoreOf<LetSkiMain>
     
     // MARK: - Public properties
     let columns = [GridItem(.flexible(minimum: 100))]
     
-    public init(factory: LetSkiFactory) {
+    public init(factory: LetSkiFactory, store: StoreOf<LetSkiMain>) {
         self.factory = factory
+        self.store = store
         let letSkiCoordinator = AnyCoordinator(factory.makeCoordinator())
         _coordinator = StateObject(wrappedValue: letSkiCoordinator)
     }
@@ -43,15 +45,21 @@ public struct LetSkiMainView: View {
         NavigationStack(path: $coordinator.path) {
             ZStack {
                 Color("main-background", bundle: .module).ignoresSafeArea()
-                
-                ScrollView(.vertical) {
-                    LazyVGrid(columns: columns) {
-                        ForEach(data.categories.keys.sorted(), id: \.self) { key in
-                            LetSkiCollection(category: key, data: data.categories[key] ?? [])
-                                .padding(.init(top: 10, leading: 10, bottom: 0, trailing: 10))
+                VStack {
+                    Text(String(store.skiCount))
+                    Button("Click") {
+                        store.send(.loadSki)
+                    }
+                    ScrollView(.vertical) {
+                        LazyVGrid(columns: columns) {
+                            ForEach(data.categories.keys.sorted(), id: \.self) { key in
+                                LetSkiCollection(category: key, data: data.categories[key] ?? [])
+                                    .padding(.init(top: 10, leading: 10, bottom: 0, trailing: 10))
+                            }
                         }
                     }
                 }
+                
             }
 //            .toolbarBackground(Color("splash"), for: .navigationBar)
 //            .toolbarBackground(.hidden, for: .automatic)
